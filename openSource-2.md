@@ -60,6 +60,16 @@ Relevant output or results are displayed to the user
 Data is stored and managed efficiently
 8. Project Structure
 
+project-root/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│── public/
+│── backend/ (if applicable)
+│── package.json
+│── README.md
+
 The project is organized into multiple components such as:
 
 Frontend (UI/UX)
