@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FirstPR Pro - Experience Level</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#7ffc97",
+                    "primary-container": "#7ffc97",
+                    "on-primary": "#e4ffe2",
+                    "inverse-primary": "#82ff99",
+                    "on-tertiary-container": "#466250",
+                    "on-surface": "#2a3434",
+                    "error-dim": "#5c1202",
+                    "outline": "#727d7c",
+                    "primary-dim": "#006027",
+                    "inverse-surface": "#0b0f0f",
+                    "surface-dim": "#cfdddb",
+                    "on-background": "#2a3434",
+                    "on-tertiary": "#e7ffec",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#5d605b",
+                    "secondary-container": "#e2e3dd",
+                    "on-tertiary-fixed-variant": "#506d5a",
+                    "surface-variant": "#dae5e4",
+                    "on-primary-fixed-variant": "#006a2c",
+                    "tertiary": "#496553",
+                    "surface-container-low": "#f0f4f3",
+                    "tertiary-container": "#dbfce4",
+                    "surface-bright": "#f8faf9",
+                    "surface-container-highest": "#dae5e4",
+                    "error-container": "#fe8b70",
+                    "secondary-fixed-dim": "#d4d5cf",
+                    "on-tertiary-fixed": "#34503e",
+                    "on-secondary-fixed": "#3d403c",
+                    "on-surface-variant": "#576160",
+                    "on-secondary-fixed-variant": "#5a5c58",
+                    "inverse-on-surface": "#9b9d9d",
+                    "surface": "#f8faf9",
+                    "on-secondary-container": "#50524e",
+                    "tertiary-fixed-dim": "#cdedd6",
+                    "on-primary-fixed": "#004a1c",
+                    "secondary-dim": "#515450",
+                    "on-secondary": "#f8f9f4",
+                    "surface-container-high": "#e1eae9",
+                    "secondary-fixed": "#e2e3dd",
+                    "error": "#9e422c",
+                    "tertiary-fixed": "#dbfce4",
+                    "surface-tint": "#006e2d",
+                    "surface-container": "#e9efee",
+                    "tertiary-dim": "#3d5948",
+                    "primary": "#006e2d",
+                    "outline-variant": "#a9b4b3",
+                    "primary-fixed-dim": "#70ed8a",
+                    "on-primary-container": "#005f27",
+                    "on-error-container": "#742410",
+                    "on-error": "#fff7f6",
+                    "background": "#f8faf9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .cloud-shadow {
+            box-shadow: 0 12px 32px -4px rgba(42, 52, 52, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center">
+<!-- TopNavBar Suppressed for Onboarding Flow as per UX Goal -->
+<main class="flex-grow flex items-center justify-center px-6 py-12 w-full">
+<!-- Central Layout Container -->
+<div class="max-w-4xl w-full">
+<!-- Onboarding Stepper -->
+<div class="flex justify-center mb-12 gap-2">
+<div class="h-1.5 w-12 rounded-full bg-primary-container"></div>
+<div class="h-1.5 w-12 rounded-full bg-primary"></div>
+<div class="h-1.5 w-12 rounded-full bg-surface-variant"></div>
+<div class="h-1.5 w-12 rounded-full bg-surface-variant"></div>
+</div>
+<!-- Header Section -->
+<div class="text-center mb-16">
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-4">What's your experience?</h1>
+<p class="text-on-surface-variant body-md max-w-md mx-auto">Help us tailor your FirstPR Pro feed by sharing your history with open source contributions.</p>
+</div>
+<!-- Selection Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<!-- Beginner Card -->
+<button class="group flex flex-col text-left p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 hover:border-primary/40 hover:bg-surface-container-high transition-all duration-150 cloud-shadow focus:outline-none focus:ring-2 focus:ring-primary">
+<div class="w-12 h-12 rounded-lg bg-tertiary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-fixed" data-icon="seedling">potted_plant</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Beginner</h3>
+<p class="text-on-surface-variant body-md leading-relaxed">I'm new to open source and looking for my first repository to help.</p>
+<div class="mt-auto pt-6 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="label-md font-semibold">Select level</span>
+<span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+<!-- Intermediate Card (Selected State Emulation) -->
+<button class="group flex flex-col text-left p-8 bg-surface-container-lowest rounded-xl border-2 border-primary bg-surface-container-low transition-all duration-150 cloud-shadow focus:outline-none ring-offset-2 ring-2 ring-primary">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="construction">construction</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Intermediate</h3>
+<p class="text-on-surface-variant body-md leading-relaxed">I've contributed a few times and understand the basic pull request workflow.</p>
+<div class="mt-auto pt-6 flex items-center text-primary">
+<span class="label-md font-semibold">Current Selection</span>
+<span class="material-symbols-outlined ml-2 text-sm" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</button>
+<!-- Advanced Card -->
+<button class="group flex flex-col text-left p-8 bg-surface-container-lowest rounded-xl border border-outline-variant/20 hover:border-primary/40 hover:bg-surface-container-high transition-all duration-150 cloud-shadow focus:outline-none focus:ring-2 focus:ring-primary">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="terminal">terminal</span>
+</div>
+<h3 class="text-lg font-bold text-on-surface mb-2">Advanced</h3>
+<p class="text-on-surface-variant body-md leading-relaxed">I'm an experienced contributor looking for high-impact architectural challenges.</p>
+<div class="mt-auto pt-6 flex items-center text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="label-md font-semibold">Select level</span>
+<span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</button>
+</div>
+<!-- Action Area -->
+<div class="flex items-center justify-between border-t border-outline-variant/10 pt-8">
+<button class="px-6 py-3 rounded-md text-on-surface-variant hover:bg-surface-container-low transition-colors font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_left">chevron_left</span>
+                    Back
+                </button>
+<div class="flex gap-4">
+<button class="px-8 py-3 rounded-md bg-primary text-on-tertiary font-bold hover:bg-primary-dim transition-all active:scale-95 shadow-sm flex items-center gap-2">
+                        Next Step
+                        <span class="material-symbols-outlined text-lg" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="w-full py-8 px-6 text-center">
+<p class="text-on-surface-variant label-sm opacity-60">Step 2 of 4 — Profile Setup</p>
+</footer>
+<!-- Background Decoration (Asymmetric Editorial Style) -->
+<div class="fixed top-0 right-0 -z-10 opacity-10 pointer-events-none">
+<div class="w-[600px] h-[600px] bg-gradient-to-bl from-primary-container to-transparent rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+</div>
+<div class="fixed bottom-0 left-0 -z-10 opacity-5 pointer-events-none">
+<div class="w-[400px] h-[400px] bg-gradient-to-tr from-secondary-container to-transparent rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+</div>
+</body></html>

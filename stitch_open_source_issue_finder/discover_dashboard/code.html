@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed": "#7ffc97",
+                "primary-container": "#7ffc97",
+                "on-primary": "#e4ffe2",
+                "inverse-primary": "#82ff99",
+                "on-tertiary-container": "#466250",
+                "on-surface": "#2a3434",
+                "error-dim": "#5c1202",
+                "outline": "#727d7c",
+                "primary-dim": "#006027",
+                "inverse-surface": "#0b0f0f",
+                "surface-dim": "#cfdddb",
+                "on-background": "#2a3434",
+                "on-tertiary": "#e7ffec",
+                "surface-container-lowest": "#ffffff",
+                "secondary": "#5d605b",
+                "secondary-container": "#e2e3dd",
+                "on-tertiary-fixed-variant": "#506d5a",
+                "surface-variant": "#dae5e4",
+                "on-primary-fixed-variant": "#006a2c",
+                "tertiary": "#496553",
+                "surface-container-low": "#f0f4f3",
+                "tertiary-container": "#dbfce4",
+                "surface-bright": "#f8faf9",
+                "surface-container-highest": "#dae5e4",
+                "error-container": "#fe8b70",
+                "secondary-fixed-dim": "#d4d5cf",
+                "on-tertiary-fixed": "#34503e",
+                "on-secondary-fixed": "#3d403c",
+                "on-surface-variant": "#576160",
+                "on-secondary-fixed-variant": "#5a5c58",
+                "inverse-on-surface": "#9b9d9d",
+                "surface": "#f8faf9",
+                "on-secondary-container": "#50524e",
+                "tertiary-fixed-dim": "#cdedd6",
+                "on-primary-fixed": "#004a1c",
+                "secondary-dim": "#515450",
+                "on-secondary": "#f8f9f4",
+                "surface-container-high": "#e1eae9",
+                "secondary-fixed": "#e2e3dd",
+                "error": "#9e422c",
+                "tertiary-fixed": "#dbfce4",
+                "surface-tint": "#006e2d",
+                "surface-container": "#e9efee",
+                "tertiary-dim": "#3d5948",
+                "primary": "#006e2d",
+                "outline-variant": "#a9b4b3",
+                "primary-fixed-dim": "#70ed8a",
+                "on-primary-container": "#005f27",
+                "on-error-container": "#742410",
+                "on-error": "#fff7f6",
+                "background": "#f8faf9"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Inter"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8faf9;
+            color: #2a3434;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-emerald-50 dark:bg-[#1a1c1b] fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-3 w-full max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8 flex-1">
+<span class="text-xl font-bold tracking-tight text-[#2a3434] dark:text-emerald-50 shrink-0">FirstPR Pro</span>
+<div class="hidden md:flex flex-1 max-w-xl">
+<div class="relative w-full group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full bg-surface-container-lowest border-none ring-1 ring-outline-variant/20 focus:ring-primary rounded-xl py-2 pl-10 pr-4 text-body-md transition-all" placeholder="Search issues, repositories, or topics" type="text"/>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex items-center gap-6 text-on-surface-variant font-['Inter'] body-md tracking-tight">
+<a class="text-[#006e2d] dark:text-emerald-400 font-semibold border-b-2 border-[#006e2d] pb-1" href="#">Discover</a>
+<a class="text-[#576160] dark:text-gray-400 hover:text-[#2a3434] hover:bg-[#e1eae9] dark:hover:bg-[#2d3231] transition-colors duration-150 rounded px-2" href="#">Bookmarks</a>
+<a class="text-[#576160] dark:text-gray-400 hover:text-[#2a3434] hover:bg-[#e1eae9] dark:hover:bg-[#2d3231] transition-colors duration-150 rounded px-2" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-3 ml-4 pl-4 border-l border-outline-variant/20">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-[#e1eae9] p-2 rounded-full transition-colors active:scale-95">menu</button>
+<img alt="User profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/10" data-alt="portrait of a professional developer with a clean background and soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv2txlxgWHBTUmzmjp9mIp7WznEdelzRBU9FqjtTdHGtbfowywtygievxAAAIeEwXVA2-CZ5mwkbtoCa4Sdu0oNU5VnLDFmrn-0KD51rScZ0cMirP-Dsf1TNfTZpV1AkKUsTjdpqsv-Kg0chseXqCWqiD4o8BgnKDSPxVA0r-ACq9fhKgBm9m8d70uKJIYY6Q74c62G_X_W0XNzb3OEUJLpzQ7Ii4fLU3ngt2qUFuxa9J13r65SZAMpc_KL-27uu-EPe7LiS-_2lE"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20 px-6 max-w-[1440px] mx-auto flex gap-6">
+<!-- SideNavBar / Left Filters -->
+<aside class="h-full w-64 hidden lg:flex flex-col sticky top-20 gap-4 p-4 bg-[#f0f4f3] dark:bg-[#1a1c1b] rounded-xl">
+<div class="flex flex-col gap-1 mb-4">
+<h2 class="text-lg font-bold text-[#2a3434] font-headline">Project Filter</h2>
+<p class="text-on-surface-variant text-xs font-label">Refine your search</p>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex items-center gap-2 mb-3 text-[#006e2d]">
+<span class="material-symbols-outlined text-lg">tune</span>
+<span class="font-medium text-sm">Difficulty</span>
+</div>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer hover:bg-white/50 p-2 rounded-md transition-colors">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface">Easy</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer hover:bg-white/50 p-2 rounded-md transition-colors">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface">Medium</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer hover:bg-white/50 p-2 rounded-md transition-colors">
+<input class="rounded border-outline-variant text-primary focus:ring-primary w-4 h-4" type="checkbox"/>
+<span class="text-sm text-on-surface">Hard</span>
+</label>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-3 text-[#006e2d]">
+<span class="material-symbols-outlined text-lg">code</span>
+<span class="font-medium text-sm">Language</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white dark:bg-[#232625] text-[#006e2d] rounded-md font-medium text-xs border border-transparent shadow-sm">TypeScript</span>
+<span class="px-3 py-1 text-[#576160] hover:bg-[#e1eae9] rounded-md text-xs transition-colors cursor-pointer">Python</span>
+<span class="px-3 py-1 text-[#576160] hover:bg-[#e1eae9] rounded-md text-xs transition-colors cursor-pointer">Rust</span>
+<span class="px-3 py-1 text-[#576160] hover:bg-[#e1eae9] rounded-md text-xs transition-colors cursor-pointer">Go</span>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full bg-primary text-on-primary py-2.5 rounded-xl font-semibold text-sm active:scale-95 transition-transform">
+                Apply Filters
+            </button>
+</aside>
+<!-- Main Discovery Grid -->
+<section class="flex-1 pb-12">
+<header class="mb-8 flex justify-between items-end">
+<div>
+<h1 class="text-2xl font-extrabold tracking-tight text-on-surface mb-1">Discover Opportunities</h1>
+<p class="text-on-surface-variant body-md">Based on your skills and starred repositories.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-low text-on-surface-variant rounded-xl text-sm font-medium hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-lg">sort</span>
+                        Recommended
+                    </button>
+</div>
+</header>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+<!-- Issue Card 1 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl relative group ring-1 ring-outline-variant/10 hover:ring-primary/20 transition-all">
+<button class="absolute top-6 right-6 material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">bookmark</button>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-medium text-on-surface-variant/70">facebook / react</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#3178c6]"></span>
+<span class="text-xs text-on-surface-variant">TypeScript</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-on-surface leading-tight mb-3 group-hover:text-primary transition-colors">Improve devtools performance with large fiber trees</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">Optimization required for the fiber tree traversal algorithm in the React DevTools background script to prevent frame drops in complex apps.</p>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded-sm uppercase tracking-wider">good first issue</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-[10px] font-bold rounded-sm uppercase">Easy</span>
+<div class="ml-auto flex items-center gap-1.5">
+<span class="text-xs font-bold text-primary">92% match</span>
+<div class="w-16 h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+</article>
+<!-- Issue Card 2 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl relative group ring-1 ring-outline-variant/10 hover:ring-primary/20 transition-all">
+<button class="absolute top-6 right-6 material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">bookmark</button>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-medium text-on-surface-variant/70">vercel / next.js</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#f1e05a]"></span>
+<span class="text-xs text-on-surface-variant">JavaScript</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-on-surface leading-tight mb-3 group-hover:text-primary transition-colors">Fix hydration mismatch in nested layout components</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">Resolve a persistent hydration warning that occurs when using partial prerendering with dynamic slots in the app directory.</p>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded-sm uppercase tracking-wider">good first issue</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-[10px] font-bold rounded-sm uppercase">Medium</span>
+<div class="ml-auto flex items-center gap-1.5">
+<span class="text-xs font-bold text-primary">85% match</span>
+<div class="w-16 h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</article>
+<!-- Issue Card 3 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl relative group ring-1 ring-outline-variant/10 hover:ring-primary/20 transition-all">
+<button class="absolute top-6 right-6 material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">bookmark</button>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-medium text-on-surface-variant/70">rust-lang / cargo</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#dea584]"></span>
+<span class="text-xs text-on-surface-variant">Rust</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-on-surface leading-tight mb-3 group-hover:text-primary transition-colors">Add warning for deprecated manifest fields in 2024 edition</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">Cargo should emit clear actionable warnings when users provide keys that will be removed or changed in the upcoming edition.</p>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded-sm uppercase tracking-wider">help wanted</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-[10px] font-bold rounded-sm uppercase">Hard</span>
+<div class="ml-auto flex items-center gap-1.5">
+<span class="text-xs font-bold text-primary">78% match</span>
+<div class="w-16 h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[78%]"></div>
+</div>
+</div>
+</div>
+</article>
+<!-- Issue Card 4 -->
+<article class="bg-surface-container-lowest p-6 rounded-xl relative group ring-1 ring-outline-variant/10 hover:ring-primary/20 transition-all">
+<button class="absolute top-6 right-6 material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">bookmark</button>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-xs font-medium text-on-surface-variant/70">tailwindlabs / tailwindcss</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#3178c6]"></span>
+<span class="text-xs text-on-surface-variant">TypeScript</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-on-surface leading-tight mb-3 group-hover:text-primary transition-colors">Update border-radius utilities to support custom tokens</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-4 leading-relaxed">Improve the JIT engine's ability to parse complex border radius configurations defined in user themes without performance regression.</p>
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded-sm uppercase tracking-wider">good first issue</span>
+<span class="px-2 py-0.5 bg-surface-container-low text-on-surface-variant text-[10px] font-bold rounded-sm uppercase">Easy</span>
+<div class="ml-auto flex items-center gap-1.5">
+<span class="text-xs font-bold text-primary">89% match</span>
+<div class="w-16 h-1 bg-surface-container-low rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[89%]"></div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Right Side Progress Panel -->
+<aside class="w-80 hidden xl:flex flex-col gap-6 sticky top-20 h-fit">
+<div class="bg-surface-container-low rounded-xl p-6">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-bold text-on-surface">Your Progress</h2>
+<span class="text-xs font-bold text-primary bg-primary-container/20 px-2 py-1 rounded">Lv. 12</span>
+</div>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs mb-2">
+<span class="text-on-surface-variant font-medium">Contribution Score</span>
+<span class="text-on-surface font-bold">2,450 / 3,000</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full">
+<div class="h-full bg-primary rounded-full w-[82%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-center justify-between p-3 bg-white dark:bg-[#232625] rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006e2d] text-lg">history</span>
+<span class="text-sm font-medium">Issues explored</span>
+</div>
+<span class="text-sm font-bold">124</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white dark:bg-[#232625] rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006e2d] text-lg">code</span>
+<span class="text-sm font-medium">PRs created</span>
+</div>
+<span class="text-sm font-bold">18</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white dark:bg-[#232625] rounded-lg">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006e2d] text-lg">star</span>
+<span class="text-sm font-medium">Starred repos</span>
+</div>
+<span class="text-sm font-bold">42</span>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-3 bg-primary text-on-primary rounded-xl font-bold text-sm shadow-md hover:bg-primary-dim active:scale-95 transition-all">
+                    Start Contributing
+                </button>
+</div>
+<div class="p-6 bg-tertiary-container rounded-xl border border-primary/5">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-xl" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<h3 class="font-bold text-on-tertiary-fixed text-sm">Weekly Challenge</h3>
+</div>
+<p class="text-on-tertiary-fixed-variant text-xs mb-4 leading-relaxed">Submit a PR to any <b>Rust</b> repository this week to earn the 'Oxidized' badge.</p>
+<div class="flex -space-x-2">
+<img alt="user" class="w-6 h-6 rounded-full ring-2 ring-white" data-alt="portrait of a software engineer at a desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjsHKzwx1p-ofg6b14sSHK6RxrLkjLqqglttuyryzH_J-hos1b6WFcJLwhbowCjjA1mDf1pzCWZ1sLRQcUp_cwmlh0soxVvwIvHtXqOOvylcGQI1C_t5vY1fg5utthik2ryw_UT6RC2qf2_P9BdDf_4tABIfZGq9MVtpAS8NWTn1zwHLEzW0uIMZMgd7G_dnC962B_UpdCeKfXMznmrKsIj-u9S8BWVG6sr8he4Cmh7Y_dkcFGJBIigzcNkwqFafdOfOQNZ9Id1mw"/>
+<img alt="user" class="w-6 h-6 rounded-full ring-2 ring-white" data-alt="confident woman software developer in modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCakQ34DwN_BjHWzx8qczu3Yv1Nfw_lmwVESkyFG1MfC4ovVzsiqtDWmFpdoR29ktoGQiw1iZdjmf-BdXQiVaQmAVs3VFlGwjyzgHDAqzrtSIddbt7_wZ5xuR3wgd1RF3gybehOqoPnUoX9CXHWjbnapZM-Y-PKa0rTf1jR4UzJ55otj9lU7i6y9HjOWB2zvEj85QlYmE_o-3vp9R63rQ6fnfufdWgKoKLOhAH2TIP7Cp6V4-l1vSbztwkCAZ6ZeXkA1ja8XMQzP-A"/>
+<img alt="user" class="w-6 h-6 rounded-full ring-2 ring-white" data-alt="man smiling with glasses in bright studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG6oCykTheQNuvZFN33_RLBELey_Q-kwbMqIVcRSGLoQZNYeVhBppgEsKmHoKAfHPEICGaoJPh8Yo5EChXosPmHRzlFtAMxf46tjgx07vGqBmzVTgiGAxDhrDjx-GbskrLisubfJkC0ss-LS_8GXk6GXUZQ_wwNt3D0jEdeYXXmUKaX7kOSq5QurQ_rCbkWMKSUZMu05mRo05E_TqBO8F-LAW7TTeAUDkM0HcFDjsyNYh96J0qIWAZKd9jup9z2K4zA_dKoN-NQ9E"/>
+<div class="w-6 h-6 rounded-full ring-2 ring-white bg-on-tertiary flex items-center justify-center text-[8px] font-bold">+42</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface-container-low border-none flex justify-around items-center py-3 px-4 z-50">
+<button class="flex flex-col items-center gap-1 text-[#006e2d]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[10px] font-bold">Discover</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">bookmarks</span>
+<span class="text-[10px] font-medium">Bookmarks</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</nav>
+</body></html>
